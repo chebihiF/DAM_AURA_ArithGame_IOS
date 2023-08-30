@@ -113,6 +113,13 @@
                             <constraint firstItem="SjN-k8-T9Y" firstAttribute="top" secondItem="7us-fQ-3Cv" secondAttribute="bottom" constant="100" id="sqw-LZ-IOJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nbr1Label" destination="ezw-SE-9IC" id="u3P-AA-UhH"/>
+                        <outlet property="nbr2Label" destination="hkR-6Q-Ho0" id="lP3-5R-MGl"/>
+                        <outlet property="resp1Button" destination="s6R-2I-OUs" id="jZ6-2W-J4H"/>
+                        <outlet property="resp2Button" destination="SjN-k8-T9Y" id="ZfJ-ce-2JB"/>
+                        <outlet property="resp3Button" destination="hDU-pT-EFl" id="zrz-nQ-Q3z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
