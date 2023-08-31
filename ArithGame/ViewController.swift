@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     var score : Int = 0
+    var gameRuning : Bool = false
     
     var timer = Timer()
     var isTimerRunning = false
@@ -27,10 +28,33 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startGame()
-        runTimer()
+        
     }
 
+    @IBAction func startClick(_ sender: Any) {
+        if !gameRuning {
+            scoreLabel.text = "Score : 0"
+            scoreLabel.textColor = UIColor.label
+            startGame()
+            runTimer()
+            gameRuning = true
+        }
+        
+    }
+    
+    @IBAction func cancelClick(_ sender: Any) {
+        timer.invalidate()
+        limit = 5
+        score = 0
+        resp1Button.setTitle("0", for: .normal)
+        resp2Button.setTitle("0", for: .normal)
+        resp3Button.setTitle("0", for: .normal)
+        nbr1Label.text = "0"
+        nbr2Label.text = "0"
+        timerLabel.text = "5"
+        gameRuning = false
+    }
+    
     @IBAction func resp1Click(_ sender: Any) {
         onClickResponse(btn: resp1Button)
         startGame()
