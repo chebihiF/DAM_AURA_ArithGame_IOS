@@ -26,23 +26,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func resp1Click(_ sender: Any) {
+        onClickResponse(btn: resp1Button)
         startGame()
-        let value = Int(resp1Button.currentTitle!)
-        let nbr1 = Int(nbr1Label.text!)
-        let nbr2 = Int(nbr2Label.text!)
-        if value == nbr1! + nbr2! {
-            score+=1
-        }
-        else {
-            score-=1
-        }
     }
     
     @IBAction func resp2Click(_ sender: Any) {
+        onClickResponse(btn: resp2Button)
         startGame()
     }
     
     @IBAction func resp3Click(_ sender: Any) {
+        onClickResponse(btn: resp3Button)
         startGame()
     }
     
@@ -78,6 +72,20 @@ class ViewController: UIViewController {
         }
         
         
+    }
+    
+    func onClickResponse(btn: UIButton){
+        
+        let value = Int(btn.currentTitle!)
+        let nbr1 = Int(nbr1Label.text!)
+        let nbr2 = Int(nbr2Label.text!)
+        if value == nbr1! + nbr2! {
+            score+=1
+        }
+        else {
+            score-=1
+        }
+        scoreLabel.text = "Score :\(score)"
     }
 }
 
