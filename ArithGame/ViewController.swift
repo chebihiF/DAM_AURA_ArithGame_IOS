@@ -16,8 +16,37 @@ class ViewController: UIViewController {
     @IBOutlet weak var resp2Button: UIButton!
     @IBOutlet weak var resp1Button: UIButton!
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    var score : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        startGame()
+    }
+
+    @IBAction func resp1Click(_ sender: Any) {
+        startGame()
+        let value = Int(resp1Button.currentTitle!)
+        let nbr1 = Int(nbr1Label.text!)
+        let nbr2 = Int(nbr2Label.text!)
+        if value == nbr1! + nbr2! {
+            score+=1
+        }
+        else {
+            score-=1
+        }
+    }
+    
+    @IBAction func resp2Click(_ sender: Any) {
+        startGame()
+    }
+    
+    @IBAction func resp3Click(_ sender: Any) {
+        startGame()
+    }
+    
+    func startGame(){
         
         let n1 = Int.random(in: 1..<201)
         let n2 = Int.random(in: 1..<201)
@@ -50,7 +79,5 @@ class ViewController: UIViewController {
         
         
     }
-
-
 }
 
