@@ -102,6 +102,12 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYB-L2-N8E">
+                                <rect key="frame" x="194" y="569.33333333333337" width="42" height="81.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="68"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -120,12 +126,14 @@
                             <constraint firstItem="s6R-2I-OUs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Tyc-aJ-ezo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HK2-fY-MiR" secondAttribute="trailing" constant="30" id="U09-Lw-4ka"/>
                             <constraint firstItem="hDU-pT-EFl" firstAttribute="top" secondItem="hkR-6Q-Ho0" secondAttribute="bottom" constant="100" id="Xhy-fx-TPF"/>
+                            <constraint firstItem="nf1-Bv-tGZ" firstAttribute="top" secondItem="rYB-L2-N8E" secondAttribute="bottom" constant="150" id="Yak-XP-2fy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nf1-Bv-tGZ" secondAttribute="trailing" constant="20" id="ZQv-1I-6ye"/>
                             <constraint firstItem="ezw-SE-9IC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Zkn-3L-TgH"/>
                             <constraint firstItem="7us-fQ-3Cv" firstAttribute="top" secondItem="5KJ-UN-jNa" secondAttribute="bottom" constant="100" id="cBh-ce-Rvt"/>
                             <constraint firstItem="7us-fQ-3Cv" firstAttribute="centerY" secondItem="ezw-SE-9IC" secondAttribute="centerY" id="eYr-eF-n1c"/>
                             <constraint firstItem="hkR-6Q-Ho0" firstAttribute="top" secondItem="5KJ-UN-jNa" secondAttribute="bottom" constant="100" id="flj-bo-wx6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hDU-pT-EFl" secondAttribute="trailing" constant="30" id="qx6-TU-3WO"/>
+                            <constraint firstItem="rYB-L2-N8E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rB3-IH-rYt"/>
                             <constraint firstItem="SjN-k8-T9Y" firstAttribute="top" secondItem="7us-fQ-3Cv" secondAttribute="bottom" constant="100" id="sqw-LZ-IOJ"/>
                             <constraint firstItem="HK2-fY-MiR" firstAttribute="top" secondItem="hDU-pT-EFl" secondAttribute="bottom" constant="60" id="twc-e8-3SC"/>
                         </constraints>
@@ -137,11 +145,12 @@
                         <outlet property="resp2Button" destination="SjN-k8-T9Y" id="ZfJ-ce-2JB"/>
                         <outlet property="resp3Button" destination="hDU-pT-EFl" id="zrz-nQ-Q3z"/>
                         <outlet property="scoreLabel" destination="HK2-fY-MiR" id="a8E-Y8-plD"/>
+                        <outlet property="timerLabel" destination="rYB-L2-N8E" id="cfT-d4-9Ya"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-504" y="-33"/>
+            <point key="canvasLocation" x="-2706" y="-127"/>
         </scene>
     </scenes>
     <resources>

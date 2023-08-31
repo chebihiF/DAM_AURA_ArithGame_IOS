@@ -16,13 +16,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var resp2Button: UIButton!
     @IBOutlet weak var resp1Button: UIButton!
     
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
     var score : Int = 0
     
+    var timer = Timer()
+    var isTimerRunning = false
+    var limit = 5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         startGame()
+        runTimer()
     }
 
     @IBAction func resp1Click(_ sender: Any) {
@@ -85,7 +91,42 @@ class ViewController: UIViewController {
         else {
             score-=1
         }
-        scoreLabel.text = "Score :\(score)"
+        scoreLabel.text = "Score : \(score)"
+        
+        if score > 0 {
+            scoreLabel.textColor = UIColor(red: 0.0863, green: 0.5176, blue: 0, alpha: 1)
+        }else if score < 0 {
+            scoreLabel.textColor = UIColor.red
+        }else{
+            scoreLabel.textColor = UIColor.label
+        }
+        limit = 5
+        timerLabel.text = String(limit)
+    }
+    
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    @objc
+    func updateTimer(){
+        limit -= 1
+        timerLabel.text = String(limit)
+        if(limit == 0){
+           // timer.invalidate()
+            score -= 1
+            scoreLabel.text = "Score : \(score)"
+            
+            if score > 0 {
+                scoreLabel.textColor = UIColor(red: 0.0863, green: 0.5176, blue: 0, alpha: 1)
+            }else if score < 0 {
+                scoreLabel.textColor = UIColor.red
+            }else{
+                scoreLabel.textColor = UIColor.label
+            }
+            limit = 5
+            startGame()
+        }
     }
 }
 
